@@ -1,0 +1,14 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=43a8ab6f_002De492_002D406e_002D8bd2_002D211f8c81de48/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SubstringAfter_WithDelimeterOfLength1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::A946F596-2D04-3169-6BB0-1E54A7C9E0DF::net6.0::LogAnalysisTests.SubstringAfter_WithDelimeterOfLength1&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=aa45dd38_002D6b96_002D452a_002D9001_002D28b9ec8bc562/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from LogAnalysisTests.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFile&gt;A946F596-2D04-3169-6BB0-1E54A7C9E0DF/f:LogAnalysisTests.cs&lt;/ProjectFile&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b5a5fe05_002D0c04_002D43ed_002D890a_002Df4cb9b5c18a2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="LogAnalysisTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::A946F596-2D04-3169-6BB0-1E54A7C9E0DF::net6.0::LogAnalysisTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

@@ -1,0 +1,5 @@
+/home/mark/Documents/Coding/exercism/csharp/log-analysis/obj/Debug/net6.0/LogAnalysis.csproj.AssemblyReference.cache
+/home/mark/Documents/Coding/exercism/csharp/log-analysis/obj/Debug/net6.0/LogAnalysis.GeneratedMSBuildEditorConfig.editorconfig
+/home/mark/Documents/Coding/exercism/csharp/log-analysis/obj/Debug/net6.0/LogAnalysis.AssemblyInfoInputs.cache
+/home/mark/Documents/Coding/exercism/csharp/log-analysis/obj/Debug/net6.0/LogAnalysis.AssemblyInfo.cs
+/home/mark/Documents/Coding/exercism/csharp/log-analysis/obj/Debug/net6.0/LogAnalysis.csproj.CoreCompileInputs.cache
