@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Akl2+IXAYwU8w/jAPAp1c3UYoWx0xTJWV8cM6raUkDIn0MBnIJ6k17QiswcR4QNk4fQlBKRan30x7B7yCWKRgA==",
+  "dgSpecHash": "A6S/rdne7uMj9hIcj6/KIAzfjQGYDKcMupTHedml2AY7fXjC0XcS/2GRnC4hinRBqL9ge0BXLPjF1V2ovsy11w==",
   "success": true,
   "projectFilePath": "/home/mark/Documents/Coding/exercism/csharp/log-levels/LogLevels.csproj",
   "expectedPackageFiles": [

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XEQHeOqyzNcQJsOoN+iK7G5vuuKD6Vnme0G1JtBaacRrbuh4qTGIrK2NEW+f7rtM64IJrWe8J2saZtk8EdxfGw==",
+  "dgSpecHash": "s1Gip83fLP65A7H60IgBw2gKM/3iv8S9JIYlffqD4gYHiBSkmbzR7vsupVH1bYFxa3VsyDwqSSAX9DJ5Vy9uXg==",
   "success": true,
   "projectFilePath": "/home/mark/Documents/Coding/exercism/csharp/lucians-luscious-lasagna/LuciansLusciousLasagna.csproj",
   "expectedPackageFiles": [
