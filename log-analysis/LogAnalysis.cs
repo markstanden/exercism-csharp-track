@@ -1,18 +1,22 @@
-using System;
-
 public static class LogAnalysis
 {
     public static string SubstringAfter(this string str, string phrase)
     {
-        int startIndex = str.IndexOf("phrase") + phrase.Length;
+        int startIndex = str.IndexOf(phrase) + phrase.Length;
         return str.Substring(startIndex, str.Length - startIndex);
     }
 
     public static string SubstringBetween(this string str, string startPhrase, string endPhrase)
     {
-        string start = str.SubstringAfter(startPhrase);
-        int end = start.IndexOf(endPhrase);
+        string substringStart = str.SubstringAfter(startPhrase);
+        int endIndex = substringStart.IndexOf(endPhrase);
 
-        return start.Substring(0, end);
+        return substringStart[..endIndex];
     }
+
+    public static string Message(this string alert)
+        => alert.SubstringAfter(":").Trim();
+
+    public static string LogLevel(this string alert)
+        => alert.SubstringBetween("[", "]");
 }
