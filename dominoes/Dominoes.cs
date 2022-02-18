@@ -8,44 +8,33 @@ public static class Dominoes
 {
     public static bool CanChain(IEnumerable<(int first, int second)> dominoes)
     {
-        return getOppositeAndRemainder((dominoes.FirstOrDefault(), dominoes)).HasValue;
-
-        //return dominoes.withoutDoubles().hasEvenNumberOfValues();
+        var firstDomino = dominoes.FirstOrDefault();
+        return GetOppositeAndRemainder(firstDomino, dominoes.ReturnWithout(firstDomino));
     }
 
-    private static bool hasEvenNumberOfValues(this IEnumerable<(int aSide, int bSide)> dominoes)
+    private static bool GetOppositeAndRemainder((int start, int end) chain, IEnumerable<(int a, int b)> remaining)
     {
-        var doms = dominoes.SelectMany(dom => new int[] {dom.aSide, dom.bSide});
-        return doms.All(allVals => doms.Count(val => allVals == val) % 2 == 0);
+        var currentListSize = remaining.LongCount();
+        var start = chain.start;
+        var end = chain.end;
+        var listToScan = remaining;
+
+        if (currentListSize < 1) return chain.start == chain.end;
+
+        var first = listToScan.Where(listDom => chain.end == listDom.a)
+                              .Select(listDom => (listDom, listToScan.ReturnWithout(listDom)))
+                              .Any(args => GetOppositeAndRemainder((chain.start, args.listDom.b), args.Item2));
+
+        var second = listToScan.Where(listDom => chain.end == listDom.b)
+                               .Select(listDom => (listDom, listToScan.ReturnWithout(listDom)))
+                               .Any(args => GetOppositeAndRemainder((chain.start, args.listDom.a), args.Item2));
+
+        return first || second;
     }
 
-    private static IEnumerable<(int, int)> withoutDoubles(this IEnumerable<(int aSide, int bSide)> stack)
-    {
-        return stack.Where(domino => domino.aSide != domino.bSide);
-    }
-
-    private static ((int, int), IEnumerable<(int, int)>)? getOppositeAndRemainder(
-        ((int aSide, int bSide) domToCheck, IEnumerable<(int aSide, int bSide)> remaining)? matchTuple)
-    {
-        var currentListSize = matchTuple.Value.remaining.LongCount();
-        if (currentListSize < 1) return new ValueTuple<(int, int), IEnumerable<(int, int)>>();
-
-        var domToCheck = matchTuple.Value.domToCheck;
-        var listToScan = matchTuple.Value.remaining;
-
-        var first = listToScan.Where(listDom => listDom.aSide == domToCheck.bSide)
-                  .Select(listDom => (listDom, listToScan.returnWithout(listDom)))
-                  .Where(args => getOppositeAndRemainder(args).HasValue)
-                  .FirstOrDefault(args => domToCheck.aSide == args.listDom.bSide);
-
-        var second = listToScan.Where(listDom => listDom.bSide == domToCheck.aSide)
-                                 .Select(listDom => (listDom, listToScan.returnWithout(listDom)))
-                                 .Where(args => getOppositeAndRemainder(args).HasValue)
-                                 .FirstOrDefault(args => domToCheck.bSide == args.listDom.aSide);
-
-        return first.
-    }
-
-    private static IEnumerable<T> returnWithout<T>(this IEnumerable<T> list, T item)
+    private static IEnumerable<T> ReturnWithout<T>(this IEnumerable<T> list, T item)
         => list.Where(items => !items.Equals(item));
+
+    private static (int, int) Flip(this (int aSide, int bSide) domino)
+        => (domino.bSide, domino.aSide);
 }
