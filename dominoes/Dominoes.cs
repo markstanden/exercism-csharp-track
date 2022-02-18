@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 
 public static class Dominoes
 {
@@ -12,28 +9,27 @@ public static class Dominoes
         return GetOppositeAndRemainder(firstDomino, dominoes.ReturnWithout(firstDomino));
     }
 
-    private static bool GetOppositeAndRemainder((int start, int end) chain, IEnumerable<(int a, int b)> remaining)
+    private static bool GetOppositeAndRemainder((int start, int end) chain, IEnumerable<(int a, int b)> dominoes)
     {
-        var currentListSize = remaining.LongCount();
-        var start = chain.start;
-        var end = chain.end;
-        var listToScan = remaining;
+        var remaining = dominoes.ToList();
+        var currentListSize = remaining.Count;
+        var (start, end) = chain;
+        if (currentListSize < 1) return start == end;
 
-        if (currentListSize < 1) return chain.start == chain.end;
 
-        var first = listToScan.Where(listDom => chain.end == listDom.a)
-                              .Select(listDom => (listDom, listToScan.ReturnWithout(listDom)))
-                              .Any(args => GetOppositeAndRemainder((chain.start, args.listDom.b), args.Item2));
-
-        var second = listToScan.Where(listDom => chain.end == listDom.b)
-                               .Select(listDom => (listDom, listToScan.ReturnWithout(listDom)))
-                               .Any(args => GetOppositeAndRemainder((chain.start, args.listDom.a), args.Item2));
-
-        return first || second;
+        return remaining.Where(dom => end == dom.a || end == dom.b)
+                        .Select(dom => (chain: (start, end == dom.a ? dom.b : dom.a),
+                                        withoutDom: remaining.ReturnWithout(dom)))
+                        .Any(args => GetOppositeAndRemainder(args.chain, args.withoutDom));
     }
 
     private static IEnumerable<T> ReturnWithout<T>(this IEnumerable<T> list, T item)
-        => list.Where(items => !items.Equals(item));
+    {
+        var shallowCopy = list.ToList();
+        shallowCopy.Remove(item);
+        return shallowCopy;
+    }
+
 
     private static (int, int) Flip(this (int aSide, int bSide) domino)
         => (domino.bSide, domino.aSide);
