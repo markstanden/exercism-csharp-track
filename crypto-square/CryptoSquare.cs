@@ -9,7 +9,6 @@ public static class CryptoSquare
                 .ToLower();
 
 
-
     public static IEnumerable<string> PlaintextSegments(string plaintext)
     {
         var normalized = NormalizedPlaintext(plaintext);
@@ -24,25 +23,31 @@ public static class CryptoSquare
     }
 
 
+    /// <see href="https://github.com/markstanden/f-c-sharp"/>
+    ///
     /// <summary>
     /// Cleanly divides two integers and
     /// returns the 'rounded up' ceiling value.
-    /// Takes two integers and returns and int.
+    /// Takes two integers and returns an int.
     ///
-    /// How many boxes are needed for x (nominator) items when each box stores y (denominator) items?
-    /// IntCeiling(x, y)
-    ///
-    /// How many boxes are needed for 10 items when each box stores 3 (denominator) items?
-    /// IntCeiling(10, 3) = 4
-    ///
-    /// Removes the need to cast doubles when working with Math.Ceiling.
+    /// <para>Removes the need to cast doubles when working with Math.Ceiling.</para>
     ///
     /// </summary>
-    /// <param name="nominator">The number to divide.</param>
+    /// <example>
+    /// <para>How many boxes are needed for x (nominator) items when each box stores y (denominator) items?</para>
+    /// <c>IntCeiling(x, y)</c>
+    /// </example>
+    ///
+    /// <example>
+    /// <para>How many boxes are needed for 10 items when each box stores 3 (denominator) items?</para>
+    /// <c>IntCeiling(10, 3) = 4</c>
+    /// </example>
+    /// <param name="nominator">The number to be divided.</param>
     /// <param name="denominator">The number to divide by.</param>
     /// <returns>The rounded up integer value</returns>
     private static int IntCeiling(int nominator, int denominator)
         => (nominator + denominator - 1) / denominator;
+
 
     private static int CalcColSize(int messageLength)
         => Enumerable.Range(1, messageLength)
@@ -56,14 +61,17 @@ public static class CryptoSquare
 
     public static string Encoded(string plaintext)
         => string.Join(" ", PlaintextSegments(plaintext)
-                          .Select(str => str.ToCharArray())
-                          .Transpose()
-                          .Select(row => string.Join("", row.ToArray())));
+                           .Select(str => str.ToCharArray())
+                           .Transpose()
+                           .Select(row => string.Join("", row.ToArray())));
 
 
+    /// <see href="https://github.com/markstanden/f-c-sharp"/>
+    ///
     /// <summary>
     /// Transposes a nested IEnumerable grid
     /// </summary>
+    ///
     /// <param name="gridEnumerable">The nested IEnumerable grid to transpose</param>
     /// <typeparam name="T"></typeparam>
     /// <returns>A new Transposed nested IEnumerable grid</returns>
@@ -77,6 +85,16 @@ public static class CryptoSquare
     }
 
 
+
+    /// <see href="https://github.com/markstanden/f-c-sharp"/>
+    /// <summary>
+    /// Returns a single column from a nested IEnumerable
+    /// Expects a complete grid, with all rows having identical numbers of columns
+    /// </summary>
+    /// <param name="grid">The nested IEnumerable to get columns from</param>
+    /// <param name="colNumber">The required column number from the grid</param>
+    /// <typeparam name="T">The type of the actual contents of the grid</typeparam>
+    /// <returns>An enumerable of the requested column.</returns>
     private static IEnumerable<T> GetColumn<T>(this IReadOnlyList<T[]> grid, int colNumber)
         => Enumerable.Range(0, grid.Count)
                      .Select(row => grid[row][colNumber]);
