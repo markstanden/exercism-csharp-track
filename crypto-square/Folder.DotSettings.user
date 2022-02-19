@@ -1,4 +1,25 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f7219318_002D3b88_002D4525_002D90cc_002D194945848c2b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from CryptoSquareTests.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=231b95cf_002D9256_002D4231_002D883d_002Dfa92165bab17/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from CryptoSquareTests.cs #8" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFile&gt;97A0133C-4384-974D-BBDE-C9394BA53DDE/f:CryptoSquareTests.cs&lt;/ProjectFile&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2453f288_002Dea66_002D4510_002Dbe45_002D08bb293eeec7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from CryptoSquareTests.cs #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFile&gt;97A0133C-4384-974D-BBDE-C9394BA53DDE/f:CryptoSquareTests.cs&lt;/ProjectFile&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=326c6553_002Df0f9_002D49d6_002Db05c_002D485bfbd59339/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from CryptoSquareTests.cs #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFile&gt;97A0133C-4384-974D-BBDE-C9394BA53DDE/f:CryptoSquareTests.cs&lt;/ProjectFile&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7c411fca_002D06f9_002D4fcf_002D83e1_002D78f8a8a7fb04/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from CryptoSquareTests.cs #7" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFile&gt;97A0133C-4384-974D-BBDE-C9394BA53DDE/f:CryptoSquareTests.cs&lt;/ProjectFile&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=baa3b430_002D7b1c_002D4bbe_002D8f47_002D4fd9e6e63e41/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from CryptoSquareTests.cs #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFile&gt;97A0133C-4384-974D-BBDE-C9394BA53DDE/f:CryptoSquareTests.cs&lt;/ProjectFile&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e4083fd9_002D7569_002D42f1_002Dabb3_002D627a21f8dbe3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from CryptoSquareTests.cs #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFile&gt;97A0133C-4384-974D-BBDE-C9394BA53DDE/f:CryptoSquareTests.cs&lt;/ProjectFile&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e44443cd_002Dbdd6_002D40e4_002Da00f_002D76bc30128bae/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from CryptoSquareTests.cs #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFile&gt;97A0133C-4384-974D-BBDE-C9394BA53DDE/f:CryptoSquareTests.cs&lt;/ProjectFile&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f7219318_002D3b88_002D4525_002D90cc_002D194945848c2b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from CryptoSquareTests.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;ProjectFile&gt;97A0133C-4384-974D-BBDE-C9394BA53DDE/f:CryptoSquareTests.cs&lt;/ProjectFile&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
