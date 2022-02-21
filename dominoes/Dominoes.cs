@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 public static class Dominoes
@@ -12,8 +13,9 @@ public static class Dominoes
     public static bool CanChain(IEnumerable<(int first, int second)> dominoes)
     {
         var firstDomino = dominoes.FirstOrDefault();
-        return GetOppositeAndRemainder(firstDomino, dominoes.ReturnWithout(firstDomino));
+        return GetOppositeAndRemainder(firstDomino, dominoes.WithoutFirstMatch(d => d.Equals(firstDomino)));
     }
+
 
     /// <summary>
     /// Recursively searches for a circular chain using all Dominoes in the supplied enumerable.
@@ -30,21 +32,32 @@ public static class Dominoes
 
         return remaining.Where(dom => end == dom.a || end == dom.b)
                         .Select(dom => (chain: (start, end == dom.a ? dom.b : dom.a),
-                                        withoutDom: remaining.ReturnWithout(dom)))
+                                        withoutDom: remaining.WithoutFirstMatch(d => d.Equals(dom))))
                         .Any(args => GetOppositeAndRemainder(args.chain, args.withoutDom));
     }
 
+
     /// <summary>
-    /// Returns an updated IEnumerable without the first occurrence of the item.
+    /// Filters an IEnumerable and returns without the first element matching the supplied predicate.
     /// </summary>
-    /// <param name="sequence">The sequence to remove the item from</param>
-    /// <param name="item">The item to be excluded from the sequence</param>
-    /// <typeparam name="T">The Type of the items in the sequence</typeparam>
-    /// <returns>A new, ordered sequence that doesn't contain the first occurrence of item</returns>
-    private static IEnumerable<T> ReturnWithout<T>(this IEnumerable<T> sequence, T item)
+    /// <param name="source">The IEnumerable to filter</param>
+    /// <param name="predicate">The predicate to match the first item to exclude</param>
+    /// <returns>IEnumerable with only the first matching occurrence removed.</returns>
+    public static IEnumerable<TSource> WithoutFirstMatch<TSource>(this IEnumerable<TSource> source,
+                                                                  Func<TSource, bool> predicate)
     {
-        var copy = sequence.ToList();
-        copy.Remove(item);
-        return copy;
+        var matchFound = false;
+
+        foreach (TSource element in source)
+        {
+            if (!predicate(element) || matchFound)
+            {
+                yield return element;
+            }
+            else
+            {
+                matchFound = true;
+            }
+        }
     }
 }

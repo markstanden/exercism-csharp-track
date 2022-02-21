@@ -11,6 +11,9 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=98e2bb03_002D70ba_002D440f_002D8cd3_002Db926a8f5210d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from DominoesTests.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;ProjectFile&gt;CC2BF75E-D6ED-E61E-E74F-949E86D98911/f:DominoesTests.cs&lt;/ProjectFile&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=99d41fc6_002Df653_002D459b_002Da000_002D7c78db92117e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from DominoesTests.cs #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=99d41fc6_002Df653_002D459b_002Da000_002D7c78db92117e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from DominoesTests.cs #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFile&gt;CC2BF75E-D6ED-E61E-E74F-949E86D98911/f:DominoesTests.cs&lt;/ProjectFile&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c93e86f6_002D8c42_002D4bd1_002D93b4_002D521bc37557e8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from DominoesTests.cs #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;ProjectFile&gt;CC2BF75E-D6ED-E61E-E74F-949E86D98911/f:DominoesTests.cs&lt;/ProjectFile&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
